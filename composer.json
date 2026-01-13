@@ -1,0 +1,56 @@
+{
+  "name": "ashishdhakal/mail-sandbox",
+  "description": "A Laravel 12 package that intercepts outgoing emails and stores them locally for viewing via an in-app web interface.",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ashish Dhakal",
+      "email": "ashishdhakal433@gmail.com"
+    }
+  ],
+  "keywords": [
+    "laravel",
+    "email",
+    "sandbox",
+    "mail-interceptor",
+    "testing",
+    "development"
+  ],
+  "require": {
+    "php": "^8.2",
+    "illuminate/support": "^12.0",
+    "illuminate/mail": "^12.0"
+  },
+    "autoload": {
+        "psr-4": {
+            "AshishDhakal\\MailSandbox\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "AshishDhakal\\MailSandbox\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AshishDhakal\\MailSandbox\\MailSandboxServiceProvider"
+            ]
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^10.0",
+        "pestphp/pest": "^3.0",
+        "pestphp/pest-plugin-laravel": "^3.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/pest",
+        "test-f": "vendor/bin/pest --filter"
+    },
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
+}
