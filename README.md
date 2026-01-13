@@ -1,7 +1,7 @@
 # Mail Sandbox for Laravel
 
 <p align="center">
-    <img src="public/assets/logo.png" alt="Mail Sandbox Logo" width="400">
+    <img src="public/assets/logo-white.png" alt="Mail Sandbox Logo" width="400">
 </p>
 
 A Laravel 12 package that intercepts outgoing emails and stores them locally for viewing via an in-app web interface. This is extremely useful in development environments – instead of sending real emails, you can capture them and inspect their content in a browser.
