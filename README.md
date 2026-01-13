@@ -1,6 +1,15 @@
 # Mail Sandbox for Laravel
 
+<p align="center">
+    <img src="public/assets/logo.png" alt="Mail Sandbox Logo" width="400">
+</p>
+
 A Laravel 12 package that intercepts outgoing emails and stores them locally for viewing via an in-app web interface. This is extremely useful in development environments – instead of sending real emails, you can capture them and inspect their content in a browser.
+
+## Prerequisites
+
+- PHP v8.2+
+- Laravel 12
 
 ## Features
 
@@ -42,6 +51,26 @@ return [
     'path' => 'mail-sandbox',
     'middleware' => ['web'],
 ];
+```
+
+### Configure Mailer
+
+Add the custom driver to your `config/mail.php`:
+
+```php
+'mailers' => [
+    'sandbox' => [
+        'transport' => 'sandbox',
+    ],
+],
+```
+
+### Update .env
+
+Update your `.env` to activate it:
+
+```bash
+MAIL_MAILER=sandbox
 ```
 
 ## Usage
