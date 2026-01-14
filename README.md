@@ -4,12 +4,12 @@
     <img src="public/assets/logo-white.png" alt="Mail Sandbox Logo" width="400">
 </p>
 
-A Laravel 12 package that intercepts outgoing emails and stores them locally for viewing via an in-app web interface. This is extremely useful in development environments – instead of sending real emails, you can capture them and inspect their content in a browser.
+A Laravel package that intercepts outgoing emails and stores them locally for viewing via an in-app web interface. This is extremely useful in development environments – instead of sending real emails, you can capture them and inspect their content in a browser.
 
 ## Prerequisites
 
-- PHP v8.2+
-- Laravel 12
+- PHP v8.1+
+- Laravel 10+
 
 ## Features
 
@@ -75,7 +75,17 @@ MAIL_MAILER=sandbox
 
 ## Usage
 
-Once installed and enabled, any email sent by your application will be intercepted and stored. You can view them at `/mail-sandbox`.
+Once installed and enabled, any email sent by your application will be intercepted and stored.
+
+### Accessing the Interface
+
+You can view the intercepted emails at:
+
+```
+/mail-sandbox
+```
+
+For example: `http://your-app.test/mail-sandbox` or `http://localhost:8000/mail-sandbox`
 
 ## Testing
 

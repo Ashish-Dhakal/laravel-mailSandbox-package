@@ -1,6 +1,6 @@
 {
   "name": "ashishdhakal/mail-sandbox",
-  "description": "A Laravel 12 package that intercepts outgoing emails and stores them locally for viewing via an in-app web interface.",
+  "description": "A Laravel package that intercepts outgoing emails and stores them locally for viewing via an in-app web interface.",
   "type": "library",
   "license": "MIT",
   "authors": [
@@ -18,36 +18,36 @@
     "development"
   ],
   "require": {
-    "php": "^8.2",
-    "illuminate/support": "^12.0",
-    "illuminate/mail": "^12.0"
+    "php": "^8.1",
+    "illuminate/support": "^10.0 || ^11.0 || ^12.0",
+    "illuminate/mail": "^10.0 || ^11.0 || ^12.0"
   },
-    "autoload": {
-        "psr-4": {
-            "AshishDhakal\\MailSandbox\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "AshishDhakal\\MailSandbox\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "AshishDhakal\\MailSandbox\\MailSandboxServiceProvider"
-            ]
-        }
-    },
-    "require-dev": {
-        "orchestra/testbench": "^10.0",
-        "pestphp/pest": "^3.0",
-        "pestphp/pest-plugin-laravel": "^3.0"
-    },
-    "scripts": {
-        "test": "vendor/bin/pest",
-        "test-f": "vendor/bin/pest --filter"
-    },
+  "autoload": {
+    "psr-4": {
+      "AshishDhakal\\MailSandbox\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "AshishDhakal\\MailSandbox\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "AshishDhakal\\MailSandbox\\MailSandboxServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+    "pestphp/pest": "^2.0 || ^3.0",
+    "pestphp/pest-plugin-laravel": "^2.0 || ^3.0"
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "test-f": "vendor/bin/pest --filter"
+  },
   "config": {
     "allow-plugins": {
       "pestphp/pest-plugin": true
