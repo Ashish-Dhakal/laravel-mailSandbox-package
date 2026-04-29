@@ -8,7 +8,7 @@ A Laravel package that intercepts outgoing emails and stores them locally for vi
 
 ## Prerequisites
 
-- PHP v8.1+
+- PHP v8.1+ (PHP 8.4 required for Laravel 13 projects)
 - Laravel 10+
 
 ## Features
